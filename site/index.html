@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>DIY Bench Power Supply</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">DIY Bench Power Supply</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#parts">Parts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#assembly">Assembly</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">DIY Bench Power Supply</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Turn your old ATX PC power supply into a bench power supply. You'll get 3.3V 5V +12V and -12V fixed voltage outputs with high current capabilities
+                            (depending on the power supply you use) and one output with adjustable voltage (0.5-30V) and adjustable current limit (up to 4A).
+                        </h2>
+                        <a class="btn btn-primary" href="#about">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Open Source Hardware</h2>
+                        <p class="text-white-50">
+                            Simply print the front and the back panel, cut some 4mm plywood to size and source some components. All design files are available on <a href="https://github.com/ruediste/bench-power-supply">github</a>, ready for tinkering.
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="assets/img/iso.jpg" alt="..." />
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="parts">
+            <div class="container px-4 px-lg-5">
+                <!-- Title -->
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-12 ">
+                        <h2 class="text-black mb-4">Required Parts</h2>
+                        <p class="text-black-50">
+                            You'll need the following parts to build the power supply. For those to be bought a link to aliexpress is included (I may get a provision if you use those). For the parts to be made yourself the required plans and documents are linked. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/atxPowerSupply.webp" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">ATX Power Supply</h4>
+                                    <p class="mb-0 text-white-50">Either you have one lying around from an old computer, or get an old one second hand. The wattage does not matter, even 200W are plenty. There are different form 
+                                        factors for PC Power supplies. Make sure to get an ATX power supply. Those have 150 mm width, 86 mm height, and typically 140 mm depth.
+                                    </p>
+                                    <p class="text-white-50">
+                                        Also make sure to have 4 screws ready. They typically come with the power supply. If you need to buy some, the size is UTS #6-32, 6mm length should do fine but technically the length depends on the power supply.
+                                    </p>
+                                    <a href="https://www.aliexpress.com/item/4000097651354.html">Buy Screws on Ali Express</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/dcDcConverter.webp" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto d-flex flex-column justify-content-center">
+                                    <h4 class="text-white">DC DC Converter</h4>
+                                    <p class="text-white-50">A small DC-DC converter which can convert the input voltage both up and down. The output voltage and the output current limit can be freely adjusted.
+                                        The converter is powered from the 12V rail of the ATX power supply.
+                                    </p>
+                                    <table  class="mb-0 text-white-50">
+                                        <tbody>
+                                            <tr><td>Output Voltage</td><td>0.5-30V</td></tr>
+                                            <tr><td>Output Current</td><td>0-4A</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="https://www.aliexpress.com/item/1005002919228626.html">Buy on Ali Express</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/bananaPlugs.webp" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Banana Plugs</h4>
+                                    <p class="mb-0 text-white-50">4mm banana plugs, you'll need 5 red and 3 black</p>
+                                    <a href="https://www.aliexpress.com/item/1005002450053218.html">Buy on Ali Express</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/switch.webp" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto d-flex flex-column justify-content-center">
+                                    <h4 class="text-white">Switch</h4>
+                                    <p class="text-white-50">A KDC11 switch, sized 15x10mm
+                                    </p>
+                                    <a href="https://www.aliexpress.com/item/1005002669219435.html">Buy on Ali Express</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/atxConnector.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto d-flex flex-column justify-content-center">
+                                    <h4 class="text-white">ATX Power Connectors</h4>
+                                    <p class="text-white-50">You need at least a 24 pin connector (2x12 Pin, Molex Mini-Fit Jr.). Modern mainboards have multiple 12V rails. To use the maximum power capacity
+                                        you need an additional 6 pin connector (2x3 Pin, Molex Mini-Fit Jr.). Otherwise don't forget to close the solder jumper during <a href="#assembly">asssembly</a>.
+                                    </p>
+                                    <a href="https://www.aliexpress.com/item/32803168245.html">Buy on Ali Express</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/pcb.webp" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">PCB</h4>
+                                    <p class="mb-0 text-white-50">The PCB is likely the hardest part to get. Either order via a PCB manufacturer or make it yourself if you are into DIY PCBs.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                    <a href="assets/resources/gerber.zip">Gerber FIles</a> <br/>
+                                    <a href="https://jlcpcb.com/"> JLC PCB </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/resources/frontPanel.png" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto d-flex flex-column justify-content-center">
+                                    <h4 class="text-white">Front and Back Panel</h4>
+                                    <p class="text-white-50">Simply 3D-print the two provided STL files and you are good to go.
+                                    </p>
+                                    <a href="assets/resources/frontPanel.stl">Front Panel STL</a> 
+                                    <a href="assets/resources/backPanel.stl">Back Panel STL</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/plywood.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center  d-flex flex-column justify-content-center">
+                                    <h4 class="text-white">Plywood</h4>
+                                    <p class="mb-0 text-white-50">Get some 4mm plywood according to the dimensions below. Some hardware store offer cutting services, otherwise just cut it yourself.</p>
+                                    <table  class="mb-0 text-white-50">
+                                        <tbody>
+                                            <tr><td>1x Top</td><td>168x240mm</td></tr>
+                                            <tr><td>2x Sides</td><td>106x240mm</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="assembly">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <h2 class="text-white mb-5">Assembly</h2>
+                        <ol class="text-white text-start">
+                            <li>Solder Molex Connectors to PCB</li>
+                            <li>Solder wires to connect the switch and the DC DC converter to PCB</li>
+                            <li>Older power supplies do not have PCIe (6 pin) power connectors. In this case add some solder over the two solder jumpers "Solder GND" and "Solder 12V" on the PCB.</li>
+                            <li>Screw banana plugs into front panel</li>
+                            <li>Screw PCB to banana Plugs</li>
+                            <li>Insert switch and DC DC Connector into front panel, connect to PCB</li>
+                            <li>Glue top and sides into grooves of front and back panel</li>
+                            <li>Plug the ATX Power supply in and fix it to back plate</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Ruedi Steinmann 2021</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
