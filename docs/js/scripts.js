@@ -9,18 +9,26 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
+    let lastScrollY=window.scrollY;
+
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
         }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
 
+        if (window.scrollY ==0) 
+        navbarCollapsible.classList.remove('navbar-shrink')
+        else
+        navbarCollapsible.classList.add('navbar-shrink')
+
+        if (window.scrollY <lastScrollY) {
+            navbarCollapsible.classList.remove('navbar-hide')
+        } else {
+            navbarCollapsible.classList.add('navbar-hide')
+        }
+        lastScrollY=window.scrollY;
     };
 
     // Shrink the navbar 
