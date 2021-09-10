@@ -9,7 +9,7 @@ dcDcDepth=26;
 
 depthGap=100;
 topGap=20;
-slotWall=3;
+slotWall=2;
 psuSideGap=2;
 backPlateThickness=2;
 
@@ -40,24 +40,29 @@ module part(description,vector){
     cube(vector);
 }
 
-difference(){ 
-    psuHousing();
-   // translate([50,0,50]) cube([1e10,1e10,1e10]);
-}
+ psuHousing();
+
+// for export
+//rotate ([90,0,0]) {front(); frontPanel();}
+//rotate ([-90,0,0]) difference() {back(); mountAtxPsu();}
+    
 
 module psuHousing(){
     //color("blue") 
     front();
+    
     // color("blue") difference() {back(); mountAtxPsu();}
-    sides();
+   
+     sides();
     
     // psu
    // translate([0,depthGap, 0])cube([psuWidth, psuDepth,psuHeight]);
+    
     // topGap
     //% translate([0,depthGap, psuHeight])cube([psuWidth, psuDepth,topGatranslatep-0.01]);
     
     frontPanel();
-    //% frontPcb();
+    % frontPcb();
     
 }
 
@@ -79,7 +84,7 @@ module back(){
             }
             
             // topGap thinning
-            translate([2*slotWall+wallThickness+psuSideGap,0,psuHeight+psuSideGap+slotWall]) cube([psuWidth,slotDepth, topGap-2*slotWall-psuSideGap]);
+            translate([2*slotWall+wallThickness+psuSideGap,-1,psuHeight+psuSideGap+slotWall]) cube([psuWidth,slotDepth+1, topGap-2*slotWall-psuSideGap]);
             }
     }
 }
@@ -136,10 +141,10 @@ module front(extendFeet=true){
             }
             // groove for top and side
             difference(){
-                translate([slotWall,frontDepth-5,-3])
-                 cube([psuWidth+2*slotWall+2*wallThickness+2*psuSideGap,20,psuHeight+topGap+wallThickness+3]);
-                translate([slotWall+wallThickness,frontDepth-5,-3])
-                 cube([psuWidth+2*slotWall+2*psuSideGap,20,psuHeight+topGap+3]);
+                translate([slotWall,frontDepth-5,-1])
+                 cube([psuWidth+2*slotWall+2*psuSideGap+2*wallThickness,20,psuHeight+topGap+wallThickness+1]);
+                translate([slotWall+wallThickness,frontDepth-5,-1])
+                 cube([psuWidth+2*slotWall+2*psuSideGap,20,psuHeight+topGap+1]);
             }
             
             // front PCB recess
@@ -149,7 +154,6 @@ module front(extendFeet=true){
             translate ([2*slotWall+wallThickness+frontPcbGlue,-1,slotWall+frontPcbGlue]) part("Front Hole",[psuWidth+2*psuSideGap-2*frontPcbGlue,12,frontHoleHeight]);
                 
         }
-        translate([2*slotWall+wallThickness,0,slotWall+frontHoleHeight-7])cube([60,frontPcbGap,7]);
     }
 }
 
@@ -159,7 +163,7 @@ module frontPanelText(value){
         } 
     }
 module bananaPlug(x,y, text){
-    translate([x,0,frontPcbHeight-y]){
+    translate([x,0,y]){
         translate([0,1,0])rotate([90,0,0]) cylinder(d=8, h=10);
         translate([0,0,6])frontPanelText(text);
     }
@@ -171,19 +175,19 @@ module frontPanel(){
         
         part("Front Panel",[psuWidth+2*wallThickness+2*psuSideGap+4*slotWall,frontPanelThickness,psuHeight+topGap+slotWall+wallThickness]);
         translate([-psuSideGap+frontPcbTolerance,0,wallThickness]){
-            bananaPlug(38.1,63.5,"3.3");    
-            bananaPlug(63.5,63.5,"5");    
-            bananaPlug(88.9,63.5,"+12");    
-            bananaPlug(114.3,63.5,"-12");    
-            bananaPlug(139.7,63.5,"+");    
-            bananaPlug(38.1,83.82,"GND");    
-            bananaPlug(63.5,83.82,"GND");    
-            bananaPlug(139.7,83.82,"-");    
-            translate([12.54,0,frontPcbHeight-79.08]) {
+            bananaPlug(38.1,32.5,"3.3");    
+            bananaPlug(63.5,32.5,"5");    
+            bananaPlug(88.9,32.5,"+12");    
+            bananaPlug(114.3,32.5,"-12");    
+            bananaPlug(139.7,32.5,"+");    
+            bananaPlug(38.1,12.18,"GND");    
+            bananaPlug(63.5,12.18,"GND");    
+            bananaPlug(139.7,12.18,"-");    
+            translate([12.54,0,16.92]) {
                 translate([0,-5,0])cube([9,10,14]);
                 translate([-2,0,7]) rotate([0,-90,0])frontPanelText("PWR");
             }
-            translate([68.575,-5,frontPcbHeight-41])cube([75.5,10,40]);
+            translate([68.575,-5,55])cube([75.5,10,40]);
         }
     }
 }
