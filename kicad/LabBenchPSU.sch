@@ -228,7 +228,7 @@ U 1 1 61365BA4
 P 5500 1850
 F 0 "J13" H 5562 1894 50  0000 L CNN
 F 1 "Solder 12V" H 5400 2000 50  0000 L CNN
-F 2 "Footprints:High-Power-Solder-Jumper" H 5500 1850 50  0001 C CNN
+F 2 "Footprints:High-Power-Solder-Jumper-Double-Sided" H 5500 1850 50  0001 C CNN
 F 3 "~" H 5500 1850 50  0001 C CNN
 	1    5500 1850
 	-1   0    0    1   
@@ -255,7 +255,7 @@ U 1 1 6137A4A4
 P 4650 1950
 F 0 "J12" H 4712 1994 50  0000 L CNN
 F 1 "Solder Gnd" H 4550 2100 50  0000 L CNN
-F 2 "Footprints:High-Power-Solder-Jumper" H 4650 1950 50  0001 C CNN
+F 2 "Footprints:High-Power-Solder-Jumper-Double-Sided" H 4650 1950 50  0001 C CNN
 F 3 "~" H 4650 1950 50  0001 C CNN
 	1    4650 1950
 	-1   0    0    1   
