@@ -1,0 +1,31 @@
+{
+  "name": "bench-power-supply",
+  "version": "1.0.0",
+  "description": "Turn your old ATX power supply into a lab bench power supply. This repository contains all design files as well as the website.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruediste/bench-power-supply.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruediste/bench-power-supply/issues"
+  },
+  "homepage": "https://github.com/ruediste/bench-power-supply#readme",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-ejs": "^5.1.0",
+    "gulp-filter": "^7.0.0",
+    "gulp-rename": "^2.0.0"
+  }
+}
